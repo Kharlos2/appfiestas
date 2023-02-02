@@ -1,19 +1,29 @@
 package org.example;
 
+import jdk.swing.interop.SwingInterOpUtils;
+
 public class Main {
     public static void main(String[] args) {
 
-        //EN EL MAIN LLAMO A MIS CLASES
-        //EN EL MAIN CREO LOS OBJETOS DE MIS CLASES
-        //EN EL MAIN CREO UNA INSTANCIA DE MI CLASE
-        //EN EL MAIN LE SACO COPIA A MIS CLASES Y CREO OBJETOS
-        Invitado objetoDeClaseInvitado=new Invitado();
-        Invitado objeto2=new Invitado(333,true,"Juan",10000);
+        //PARA USAR LA CLASE CREO UN OBJETO
+        Empleado objetoTipoEmpleado = new Empleado();
+
+        //UTILIZAR EL OBJETO PARA ACCEDER A UN ATRIBUTO
+        objetoTipoEmpleado.nombre = "PEPE";
+
+        //Accediendo a los metodos de mi clase empleado:
+        String resultado = objetoTipoEmpleado.saludar("LUCHO MIAMOR");
+        int sumatoria = objetoTipoEmpleado.sumar(5, 3);
+
+        //Acceder a mostrar el retorno de la funcion
+
+        System.out.println(sumatoria);
+
+        System.out.println(resultado);
+
+        System.out.println(objetoTipoEmpleado.saludar("a"));
 
 
-        //obtener el valor de los atributos
-        System.out.println(objetoDeClaseInvitado.nombre);
-        System.out.println(objeto2.nombre);
 
     }
 }
